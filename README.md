@@ -6,6 +6,8 @@ The challenge to develop a api to perform a search on the www.mercadolivre.com.b
 
 ### Post Request
 
+### URL: https://mundiale-crawler.herokuapp.com/search
+
 ```
 {
     "search": String,
@@ -38,17 +40,26 @@ The challenge to develop a api to perform a search on the www.mercadolivre.com.b
 # Online Tests
 
 ```
-http://127.0.0.1
+https://mundiale-crawler.herokuapp.com/docs/
 ```
 
 # How to Configure
 
 * `git clone git@https://github.com/renemartins/mundiale-crawler.git`
-* `cd mundiale-crawler`
+* `cd mundiale-crawler/nodejs`
 * `npm install`
 * `npm start`
 
+### Default URL: http://127.0.0.1:3000/search
 
 ## How to run the tests
 
 * `npm test`
+
+## How to configure with Docker
+
+* `git clone git@https://github.com/renemartins/mundiale-crawler.git`
+* `cd mundiale-crawler`
+* `docker-compose up --build`
+
+### Default URL: http://127.0.0.1:3000/search
