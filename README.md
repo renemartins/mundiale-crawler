@@ -5,6 +5,7 @@
 ```
 https://mundiale-crawler.herokuapp.com/docs/
 ```
+![](./public/mundiale-crawler.gif)
 
 ## Challenge Proposal
 
