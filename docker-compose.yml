@@ -1,0 +1,17 @@
+version: '3'
+services:
+    node_mundiale_crawler:
+        container_name: node_mundiale_crawler
+        build: 
+            context: ./nodejs
+            dockerfile: Dockerfile
+        volumes: 
+            - ${NODE_APPLICATION}:/usr/src/mundiale
+        ports: 
+            - "${NODE_PORT}:3000"
+        networks:
+            - mundiale-network
+
+networks:
+    mundiale-network:
+        driver: bridge

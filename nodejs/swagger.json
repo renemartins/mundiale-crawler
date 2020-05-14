@@ -1,0 +1,93 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "This is a challenge proposed by Mundiale, where a request will be made to the Mercado Livre with the information of a certain product and will return all available products according to the informed limit.",
+    "version": "1.0.0",
+    "title": "Desafio Mundiale",
+    "contact": {
+      "email": "renemartins1206@gmail.com"
+    }
+  },
+  "host": "127.0.0.1:3000",
+  "basePath": "/",
+  "tags": [
+    {
+      "name": "Crawler",
+      "description": null,
+      "externalDocs": {
+        "description": "Saiba mais",
+        "url": "https://github.com/renemartins/mundiale-crawler"
+      }
+    }
+  ],
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/search": {
+      "post": {
+        "tags": [
+          "Mercado Livre"
+        ],
+        "summary": "Make a request to mercado livre and returns the products list in a json.",
+        "description": "",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "JSON of a product to be viewed",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Search"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    }
+  },
+  "responses": {
+    "UnauthorizedError": {
+      "description": "Auth invalid.",
+      "headers": {
+        "WWW_Authenticate": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Search": {
+      "type": "object",
+      "properties": {
+        "search": {
+          "type": "string",
+          "description": "Product Name",
+          "example": "Cadeado"
+        },
+        "limit": {
+          "type": "number",
+          "format": "int",
+          "description": "Limit of products",
+          "example": 30
+        }
+      }
+    }
+  }
+}
