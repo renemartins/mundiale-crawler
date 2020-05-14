@@ -1,5 +1,11 @@
 # Desafio Mundiale
 
+# Online Tests
+
+```
+https://mundiale-crawler.herokuapp.com/docs/
+```
+
 ## Challenge Proposal
 
 The challenge to develop a api to perform a search on the www.mercadolivre.com.br website, returning a list of products.
@@ -34,13 +40,6 @@ The challenge to develop a api to perform a search on the www.mercadolivre.com.b
 "store": String,
 "state": String,
 }
-```
-
-
-# Online Tests
-
-```
-https://mundiale-crawler.herokuapp.com/docs/
 ```
 
 # How to Configure
